@@ -286,3 +286,6 @@ window.TinyQ = {
 }
 
 })();
+document.addEventListener("DOMContentLoaded", function(event) {
+    window.TinyQ.init();
+  });
