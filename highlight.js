@@ -242,7 +242,7 @@ function insertHighlightOptionNode(selection, ori) {
         top = 0
     }
 
-    setStyle(container, 'z-index', 99999);
+    setStyle(container, 'z-index', 2147483647);
     setStyle(container, 'top', top + 'px');
     setStyle(container, 'visibility', 'visible');
 }
