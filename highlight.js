@@ -209,6 +209,7 @@ function insertHighlightOptionNode(selection, ori) {
     });
 
     // Calculate bounds of range
+    const childPos  = document.getElementById('target').getBoundingClientRect();console.log(childPos);
     var cRects = range.getClientRects(); //console.log(cRects);
     var hBounds = [];
     for (var i = 0; i < cRects.length; i++) {
@@ -218,8 +219,8 @@ function insertHighlightOptionNode(selection, ori) {
     var rLeft = Math.min.apply(null, hBounds);
     var rRight = Math.max.apply(null, hBounds);
 
-    var y = cRects[0].top + window.scrollY;
-    var x = rLeft + window.scrollX + ((rRight - rLeft) / 2);
+    var y = cRects[0].top - childPos.top;
+    var x = rLeft + ((rRight - rLeft) / 2) - childPos.left;
     
     document.getElementById("target").appendChild(container);
 
@@ -289,3 +290,4 @@ window.TinyQ = {
 document.addEventListener("DOMContentLoaded", function(event) {
     window.TinyQ.init();
   });
+1
