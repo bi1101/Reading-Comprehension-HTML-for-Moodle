@@ -221,7 +221,7 @@ function insertHighlightOptionNode(selection, ori) {
     var y = cRects[0].top + window.scrollY;
     var x = rLeft + window.scrollX + ((rRight - rLeft) / 2);
     
-    document.body.appendChild(container);
+    document.getElementById("target").appendChild(container);
 
     var containerHeight = window.getComputedStyle(container).getPropertyValue('height');
     var containerWidth = window.getComputedStyle(container).getPropertyValue('width');
