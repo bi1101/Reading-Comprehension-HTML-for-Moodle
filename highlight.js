@@ -1,3 +1,7 @@
+document.addEventListener("DOMContentLoaded", function(event) {
+    window.TinyQ.init();
+  });
+
 (function() {
 var t = '';
 var CONTAINER_ID = '5kjl3_container_id';
@@ -287,7 +291,3 @@ window.TinyQ = {
 }
 
 })();
-document.addEventListener("DOMContentLoaded", function(event) {
-    window.TinyQ.init();
-  });
-1
